@@ -42,7 +42,7 @@ def login(username, password):
         return False
 
 def run_exam_evaluator():
-    subprocess.run(["streamlit", "run", "EMark.py"])
+    subprocess.run(["streamlit", "run", "EvaluateMark.py"])
 
 def main():
     st.title("Login/Signup Page")
