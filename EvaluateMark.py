@@ -14,7 +14,7 @@ from nltk.corpus import stopwords
 # Download NLTK stopwords (you need to do this once)
 #nltk.download('stopwords')
 def logout():
-    subprocess.run(["streamlit", "run", "EMarkLogin.py"])
+    subprocess.run(["streamlit", "run", "Login.py"])
 if st.button("logout"):
     st.session_state.authenticated = False
     logout()
@@ -141,11 +141,11 @@ def main():
                 if(similarity_score >= 1):
                     rounded_value = round(similarity_score + 0.5)
                     st.info("You've Got High Mark!")
-                    text_to_speech("Congratulations You've Got High Mark!")
+                    # text_to_speech("Congratulations You've Got High Mark!")
                 elif(similarity_score >= 0.3):
                     rounded_value = math.ceil(similarity_score)
                     st.info("You've Got Pass Mark!")
-                    text_to_speech("You've Got Pass Mark.. Try to get High Marks")
+                    # text_to_speech("You've Got Pass Mark.. Try to get High Marks")
                 else:
                     rounded_value = 0
                     st.warning("...Fail...")
